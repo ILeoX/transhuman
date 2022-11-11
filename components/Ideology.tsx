@@ -50,7 +50,7 @@ export default function Ideology() {
             donations to the Binance charity donation wallet. We will ensure
             transparency and accountability by ensuring that all donations are
             made to reputable research centers which will be made public while
-            employing reputable auditors to check the books.'
+            employing reputable auditors to check the books.
           </p>
           <div className='sticky bottom-0 bg-black bg-backg bg-opacity-10 backdrop-blur-sm py-6 rounded-lg -mb-3'></div>
           {/* <div className='flex mt-14 text-sm'>
