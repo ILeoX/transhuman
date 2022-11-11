@@ -10,7 +10,7 @@ interface Props {
 const Card = ({ image, heading, text, status }: Props) => {
   const steps = text.split(',').map((step: string) => {
     return (
-      <li className='list-none mt-2'>
+      <li key={step} className='list-none mt-2'>
         <span className='text-green-400'>
           {status.toLowerCase() == 'coming soon' ? 'o' : <>&#10003;</>}
         </span>{' '}
