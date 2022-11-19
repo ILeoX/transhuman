@@ -1,7 +1,5 @@
-import { url } from 'inspector';
 import Image from 'next/image';
 import Link from 'next/link';
-import bg from '../public/sphere.png';
 import Hero2 from '../public/Herobg.jpg';
 
 export default function Hero() {

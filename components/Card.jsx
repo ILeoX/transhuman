@@ -1,16 +1,9 @@
 import Image from 'next/image';
 import useElementOnScreen from '../utils/useElementOnScreen';
 
-interface Props {
-  image: string;
-  heading: string;
-  text: string;
-  status: string;
-}
-
-const Card = ({ image, heading, text, status }: Props) => {
+const Card = ({ image, heading, text, status }) => {
   const [containerRef, isVisible] = useElementOnScreen();
-  const steps = text.split(',').map((step: string) => {
+  const steps = text.split(',').map((step) => {
     return (
       <li key={step} className='list-none mt-2'>
         <span className='text-green-400'>
@@ -38,7 +31,8 @@ const Card = ({ image, heading, text, status }: Props) => {
             width={100}
             height={100}
           />
-          <p ref={containerRef}></p>
+
+          <span ref={containerRef}></span>
           <p
             className={
               status.toLowerCase() == 'coming soon'

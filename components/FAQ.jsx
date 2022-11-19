@@ -57,7 +57,13 @@ export default function Faq() {
       </div>
 
       {faq.map((quest) => {
-        return <Question question={quest.question} answer={quest.answer} />;
+        return (
+          <Question
+            key={quest.question}
+            question={quest.question}
+            answer={quest.answer}
+          />
+        );
       })}
     </div>
   );

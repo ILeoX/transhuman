@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 export default function useElementOnScreen(options = { threshold: 1 }) {
   const containerRef = useRef(null);
