@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function Footer() {
   return (
     <footer className='flex px-20 py-12 items-baseline justify-between bg-black'>
-      <div className='flex-col'>
+      <div className='flex-col rise-anim'>
         <div className='flex text-2xl font-semibold'>
           <Image className='' src='/logo.png' width={30} height={30} alt='' />
           <span className='ml-2'> transhuman</span>
@@ -17,7 +17,7 @@ export default function Footer() {
             name='language'
             id='languages'
           >
-            <option selected value='English'>
+            <option defaultValue={''} value='English'>
               English
             </option>
             <option value='Spanish'>Spanish</option>
@@ -29,7 +29,7 @@ export default function Footer() {
         <p className='mt-8 text-md text-secondary'>© 2022 Transhuman Coin</p>
       </div>{' '}
       {/** Footer Linsk */}
-      <div className=''>
+      <div className='rise-anim'>
         <p className=' text-secondary font-semibold'> Community </p>
         <ul className='text-sm flex-col'>
           <div className='pt-3 text-white hover:text-green-400'>
@@ -66,10 +66,10 @@ export default function Footer() {
           </div>
         </ul>
       </div>
-      <div className='flex-col'>
+      <div className='flex-col rise-anim'>
         <p className=' font-semibold text-secondary'>Contact</p>
         <ul className='text-sm'>
-          <div className='pt-3 text-white hover:text-green-400'>
+          <div className='pt-3 text-white hover:text-green-400 transition-colors'>
             <Link href=''>Open Roles</Link>
           </div>
           <div className='pt-3 text-white hover:text-green-400'>
