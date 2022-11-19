@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import Roadmap from '../components/Roadmap';
 import Ideology from '../components/Ideology';
 import Community from '../components/Community';
+import Faq from '../components/FAQ';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <Roadmap />
       <Ideology />
+      <Faq />
       <Community />
       <Footer />
     </Layout>
