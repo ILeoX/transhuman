@@ -8,7 +8,13 @@ export default function Hero() {
       {/**Image Holder */}
       <div className='absolute hero h-screen w-full'>
         <span>
-          <Image src={Hero2} height={2000} width={2000} priority alt='' />
+          <Image
+            src={Hero2}
+            height={2000}
+            width={2000}
+            priority={true}
+            alt=''
+          />
         </span>
       </div>
 
@@ -53,7 +59,13 @@ export default function Hero() {
 
         <div className='side-right w-1/2 flex items-center justify-center slide-img'>
           <span className='slide-img2'>
-            <Image src='/sidebg.png' alt={''} width={500} height={500} />{' '}
+            <Image
+              src='/sidebg.png'
+              alt={''}
+              width={500}
+              height={500}
+              priority={true}
+            />{' '}
           </span>
         </div>
       </section>
