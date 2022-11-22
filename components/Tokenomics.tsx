@@ -36,7 +36,7 @@ const Tokenomics = (props: Props) => {
       >
         {' '}
         <span ref={containerRef}></span>
-        <div className='absolute z-10 inset-0'>
+        <div className='absolute -z-10 inset-0'>
           <div className='absolute inset-0 flex items-center justify-center opacity-20 blur-2xl'>
             <div className='bg-gradient-to-bl from-[#36CFB5] to-[#113434] scale-105 w-[24rem] h-[12rem] rounded-full animate-flow'></div>
           </div>
