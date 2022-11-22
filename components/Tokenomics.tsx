@@ -26,7 +26,6 @@ const Tokenomics = (props: Props) => {
           <span className='text-green-500'> Tokenomics </span>
         </p>
       </div>
-      <span ref={containerRef}></span>
 
       <div
         className={`${
@@ -35,9 +34,11 @@ const Tokenomics = (props: Props) => {
             : 'invis'
         }`}
       >
-        <div className='absolute -inset-1 border-4 border-green-300 -z-10'>
+        {' '}
+        <span ref={containerRef}></span>
+        <div className='absolute z-10 inset-0'>
           <div className='absolute inset-0 flex items-center justify-center opacity-20 blur-2xl'>
-            <div className='bg-gradient-to-bl from-[#36CFB5] to-[#113434] scale-125 w-[26rem] h-[12rem] rounded-full animate-flow'></div>
+            <div className='bg-gradient-to-bl from-[#36CFB5] to-[#113434] scale-105 w-[24rem] h-[12rem] rounded-full animate-flow'></div>
           </div>
         </div>
         <div className='mb-10 mt-10 slide-anim-right'>
@@ -66,7 +67,6 @@ const Tokenomics = (props: Props) => {
             is allocated for marketing.
           </p>
         </div>
-
         <div className='z-50'>
           <Link href='https://bscscan.com/address/0x56083560594E314b5cDd1680eC6a493bb851BBd8'>
             <button className='ml-4 px-3 py-2 border-[1px] border-green-800 text-sm text-gray-400 hover:text-gray-300 hover:border-green-500'>

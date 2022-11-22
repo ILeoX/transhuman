@@ -134,28 +134,28 @@ a {
 }
 
 .fall-anim {
-  animation: fall-anim 1s ease-in-out forwards;
+  animation: fall-anim 500ms ease-in-out forwards;
   transform: translateY(20px);
 }
 
 .rise-anim {
-  animation: rise-anim 1s ease-in-out forwards;
+  animation: rise-anim 500ms ease-in-out forwards;
 }
 
 .text-anim {
-  animation: fall-anim 1s ease-in-out forwards;
+  animation: fall-anim 500ms ease-in-out forwards;
 }
 
 .slide-anim {
-  animation: slide-anim 1s ease-in-out;
+  animation: slide-anim 500ms ease-in-out;
 }
 
 .slide-anim-right {
-  animation: slide-anim-right 1s ease-in-out;
+  animation: slide-anim-right 500ms ease-in-out;
 }
 
 .slide-img {
-  animation: img-anim 1s ease-in-out;
+  animation: img-anim 500ms ease-in-out;
 }
 
 .slide-img2 {
@@ -190,7 +190,7 @@ div.loader > span {
 
 .border-anim {
   animation: border-anim 2s ease-in forwards;
-  transition: border 1s ease-in-out;
+  transition: border 500ms ease-in-out;
 }
 
 @keyframes ring {
