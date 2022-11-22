@@ -1,11 +1,12 @@
 import useElementOnScreen from '../utils/useElementOnScreen';
 import Card from './Card';
-import { useRef, useState, useEffect } from 'react';
+import { LegacyRef } from 'react';
 
 export default function Roadmap() {
-  const [containerRef, isVisible] = useElementOnScreen({
-    threshold: 0.8,
-  });
+  const [containerRef, isVisible] = useElementOnScreen() as [
+    LegacyRef<HTMLSpanElement>,
+    boolean
+  ];
   return (
     <div>
       <div className='relative flex-col pt-32 mx-20 w-fit' id='roadmap'>

@@ -19,7 +19,7 @@ const Card = ({ image, heading, text, status }) => {
       <div
         className={`${
           isVisible
-            ? ' border-[#19213b] border-2 rounded-2xl w-fit pb-10 transition-all bg-gradient-to-b from-[#050812] via-[#19213b] to-[#0c1329] hover:scale-105 hover:border-[#1e2a50] slide-anim'
+            ? ' border-[#19213b] border-2 rounded-2xl w-fit pb-10 transition-all bg-gradient-to-b from-[#050812] via-[#19213b] to-[#0c1329] hover:scale-105 hover:border-[#1e2a50] slide-anim shadow-lg'
             : 'invis'
         }`}
       >

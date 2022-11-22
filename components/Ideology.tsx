@@ -1,8 +1,12 @@
 import Image from 'next/image';
+import { LegacyRef } from 'react';
 import useElementOnScreen from '../utils/useElementOnScreen';
 
 export default function Ideology() {
-  const [containerRef, isVisible] = useElementOnScreen();
+  const [containerRef, isVisible] = useElementOnScreen() as [
+    LegacyRef<HTMLSpanElement>,
+    boolean
+  ];
   return (
     <div className='pt-32 mx-20'>
       <div className='text-4xl text-center font-bold text-white py-3 z-40'>
@@ -13,7 +17,7 @@ export default function Ideology() {
       <span ref={containerRef}></span>
       <div className='relative h-full w-full flex flex-row-reverse items-center mt-20 mb-14'>
         <section className='absolute inset-0 flex items-center justify-center opacity-20 blur-2xl'>
-          <div className='bg-gradient-to-bl from-[#19193d] to-[#0f0f31] w-96 h-96 rounded-full'></div>
+          <div className='bg-gradient-to-bl from-[#19193d] to-[#0f0f31] w-96 h-96 rounded-full animate-flow'></div>
         </section>
 
         <div

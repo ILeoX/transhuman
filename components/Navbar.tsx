@@ -1,7 +1,31 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useContext, useEffect, useState } from 'react';
+import { connectWallet } from '../utils/Context';
 
 export default function Nav() {
+  const connWallet = useContext(connectWallet);
+  const [isConnected, setIsConnected] = useState<boolean>(false);
+
+  async function handleConnect() {
+    if (!isConnected) {
+      const connData = await connWallet();
+
+      if (connData && 'connectedX' in connData && connData.connectedX !== null)
+        setIsConnected(true);
+    }
+  }
+
+  useEffect(function () {
+    const alreadyConnected = localStorage.getItem(
+      'walletAddress-transhumancoin'
+    );
+
+    if (alreadyConnected) {
+      handleConnect();
+    }
+  });
+
   return (
     <div className='px-20 py-7 bg-gray-700 bg-backg bg-opacity-5 backdrop-blur-md top-0 z-[60] flex justify-between sticky items-center w-full h-auto'>
       <div className='flex items-center text-2xl font-semibold'>
@@ -11,7 +35,7 @@ export default function Nav() {
       </div>
 
       <div className='flex text-sm justify-between items-center fall-anim'>
-        <Link className='px-2 nav-link' href=''>
+        <Link className='px-2 nav-link' href='/#tokenomics'>
           Tokenomics{' '}
         </Link>
 
@@ -41,10 +65,16 @@ export default function Nav() {
         </Link>
 
         <Link href=''>
-          <span className='ml-4 p-3 bg-green-500 hover:border-[1px] font-bold over:border-[1px] hover:border-green-500 hover:bg-transparent transition-colors'>
-            {' '}
-            Buy THC
-          </span>
+          <button
+            className={
+              !isConnected
+                ? 'ml-4 px-3 py-[.65rem] bg-green-500 hover:border-[1px] font-bold hover:border-green-500 hover:bg-transparent transition-colors'
+                : 'ml-4 px-3 py-[.65rem] border-[1px] border-green-500 font-bold'
+            }
+            onClick={handleConnect}
+          >
+            {isConnected ? 'Connected' : 'Connect Wallet'}
+          </button>
         </Link>
       </div>
     </div>

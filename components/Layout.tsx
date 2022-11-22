@@ -1,14 +1,16 @@
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
+import THC from '../utils/THC.json';
+
+const address = '0x56083560594E314b5cDd1680eC6a493bb851BBd8';
+const abi = THC.abi;
 
 export default function Layout({ children }) {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    setLoading(true);
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 4600);
 
     return () => clearTimeout(timer);
   }, []);

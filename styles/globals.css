@@ -10,7 +10,8 @@ body {
   margin: 0;
   font-family: Raleway, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background: #050812;
+  background: #020202;
+  /* background: #050812; */
   color: white;
 }
 
@@ -142,8 +143,7 @@ a {
 }
 
 .text-anim {
-  animation: fall-anim 1s ease-in-out forwards 500ms;
-  transform: translateY(0px);
+  animation: fall-anim 1s ease-in-out forwards;
 }
 
 .slide-anim {
@@ -159,7 +159,7 @@ a {
 }
 
 .slide-img2 {
-  animation: img-anim2 20s ease-in-out infinite 3s;
+  animation: img-anim2 20s ease-in-out infinite;
   animation-delay: 5s;
 }
 
@@ -175,7 +175,7 @@ a {
 }
 
 .fall-expand {
-  animation: img-anim2 20s ease-in-out infinite 3s;
+  animation: img-anim2 20s ease-in-out infinite;
 }
 
 div.loader > span {
@@ -186,6 +186,11 @@ div.loader > span {
   line-height: 100px;
   animation: text 5s ease-in-out infinite;
   z-index: 1;
+}
+
+.border-anim {
+  animation: border-anim 2s ease-in forwards;
+  transition: border 1s ease-in-out;
 }
 
 @keyframes ring {
@@ -299,8 +304,26 @@ div.loader > span {
   }
 }
 
-.invis {
-  opacity: 0;
+@keyframes border-anim {
+  0% {
+    border: none;
+  }
+
+  25% {
+    border-top: 1px solid #e65c00;
+  }
+
+  50% {
+    border-right: 1px solid #0456c8;
+  }
+
+  75% {
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  100% {
+    border: 1px solid #0456c8;
+  }
 }
 
 #open {
@@ -309,4 +332,8 @@ div.loader > span {
 
 #hidden {
   display: none;
+}
+
+.invis {
+  opacity: 0;
 }

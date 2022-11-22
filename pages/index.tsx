@@ -6,6 +6,8 @@ import Roadmap from '../components/Roadmap';
 import Ideology from '../components/Ideology';
 import Community from '../components/Community';
 import Faq from '../components/FAQ';
+import Tokenomics from '../components/Tokenomics';
+import Balance from '../components/Balance';
 
 export default function Home() {
   return (
@@ -14,9 +16,11 @@ export default function Home() {
       <Hero />
       <Roadmap />
       <Ideology />
+      <Tokenomics />
       <Faq />
       <Community />
       <Footer />
+      <Balance />
     </Layout>
   );
 }

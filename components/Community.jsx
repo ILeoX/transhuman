@@ -48,7 +48,7 @@ const Community = () => {
               </p>
             </div>
           </Link>
-          <p ref={containerRef}></p>
+          <span ref={containerRef}></span>
           <Link href='https://www.facebook.com/transhumancoin'>
             <div className='flex justify-evenly py-8 items-center rounded-lg border-spacing-4 border-2 bg-gradient-to-b from-slate-900 to-black transition-all hover:shadow-md hover:shadow-gray-800 max-w-xs w-60 mb-2'>
               <Image width={40} height={40} src='/twitter.svg' alt='' />

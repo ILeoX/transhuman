@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-export default function useElementOnScreen(options = { threshold: 1 }) {
+export const useElementOnScreen = (options = { threshold: 1 }) => {
   const containerRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
-  const callBack = (entries) => {
+  const callBack = (entries: any[]) => {
     const entry = entries[0];
     setIsVisible(entry.isIntersecting);
   };
@@ -12,7 +12,6 @@ export default function useElementOnScreen(options = { threshold: 1 }) {
   useEffect(() => {
     const observer = new IntersectionObserver(callBack, options);
     if (containerRef.current) {
-      console.log(containerRef.current);
       observer.observe(containerRef.current);
     }
     return () => {
@@ -21,4 +20,6 @@ export default function useElementOnScreen(options = { threshold: 1 }) {
   }, [options]);
 
   return [containerRef, isVisible];
-}
+};
+
+export default useElementOnScreen;
