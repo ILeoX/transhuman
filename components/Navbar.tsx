@@ -34,32 +34,32 @@ export default function Nav() {
         <span className='text-green-500 font-bold'>coin</span>
       </div>
 
-      <div className='flex text-sm justify-between items-center fall-anim'>
-        <Link className='px-2 nav-link' href='/#tokenomics'>
+      <div className='flex text-sm justify-between items-center fall-anim '>
+        <Link className='px-2 hover:text-green-500' href='/#tokenomics'>
           Tokenomics{' '}
         </Link>
 
         <Link
-          className='px-2 nav-link'
+          className='px-2 hover:text-green-500'
           href='https://www.transhumancoin.finance/whitepaperthc.pdf'
         >
           <span className='nav-link'> Whitepaper</span>
         </Link>
 
-        <Link className='px-2 nav-link' href='/#team'>
+        <Link className='px-2 hover:text-green-500' href='/#team'>
           <span className='nav-link'> Our Team </span>
         </Link>
-        <Link className='px-2 nav-link' href='/#faqs'>
+        <Link className='px-2 hover:text-green-500' href='/#faqs'>
           <span className='nav-link'> FAQs</span>
         </Link>
-        <Link className='px-2 nav-link' href='/#roadmap'>
+        <Link className='px-2 nav-link hover:text-green-500' href='/#roadmap'>
           <span className='nav-link'> Roadmap</span>
         </Link>
       </div>
 
       <div className='text-sm'>
         <Link href=''>
-          <span className='border-[1px] border-white p-3 '>
+          <span className='border-[1px] border-white p-3 hover:border-green-500'>
             Join the Mission
           </span>{' '}
         </Link>
