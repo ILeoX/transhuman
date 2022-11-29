@@ -9,10 +9,10 @@ export default function Ideology() {
     <div className='mobile:px-8 pt-32 px-20'>
       <div className='mobile:3xl mobile:py-1 text-4xl text-center font-bold text-white py-3 z-40'>
         <p className={`${isVisible ? 'fall-anim' : 'invis'}`}>
-          Our<span className='text-green-500'> ideology </span>
+          Our<span className='text-green-500'> Ideology </span>
         </p>
       </div>
-
+      <span ref={ref}></span>
       <div className='mobile:relative h-full w-full flex flex-row-reverse items-center mt-20 mb-14'>
         <section className='mobile:hidden tablet:hidden absolute inset-0 flex items-center justify-center opacity-20 blur-2xl'>
           <div className='bg-gradient-to-bl from-[#19193d] to-[#0f0f31] w-96 h-96 rounded-full animate-flow'></div>

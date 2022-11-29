@@ -12,7 +12,7 @@ module.exports = {
       mobile: { max: '540px' },
       // => @media (min-width: 170px) { ... }
 
-      tablet: { max: '1050px' },
+      tablet: { max: '1090px' },
       // => @media (min-width: 640px) { ... }
 
       laptop: { max: '1024px' },
