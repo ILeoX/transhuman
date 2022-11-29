@@ -10,7 +10,7 @@ const Tokenomics = (props: Props) => {
 
   return (
     <div
-      className='mobile:pt-20 relative pt-32 flex-col justify-center clip '
+      className='mobile:pt-32 relative pt-32 flex-col justify-center clip '
       id='tokenomics'
     >
       <div
