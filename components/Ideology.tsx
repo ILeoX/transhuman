@@ -1,29 +1,27 @@
 import Image from 'next/image';
-import { LegacyRef } from 'react';
+import { useRef } from 'react';
 import useElementOnScreen from '../utils/useElementOnScreen';
 
 export default function Ideology() {
-  const [containerRef, isVisible] = useElementOnScreen() as [
-    LegacyRef<HTMLSpanElement>,
-    boolean
-  ];
+  const ref = useRef();
+  const isVisible = useElementOnScreen(ref);
   return (
-    <div className='pt-32 mx-20'>
-      <div className='text-4xl text-center font-bold text-white py-3 z-40'>
+    <div className='mobile:px-8 pt-32 px-20'>
+      <div className='mobile:3xl mobile:py-1 text-4xl text-center font-bold text-white py-3 z-40'>
         <p className={`${isVisible ? 'fall-anim' : 'invis'}`}>
           Our<span className='text-green-500'> ideology </span>
         </p>
       </div>
-      <span ref={containerRef}></span>
-      <div className='relative h-full w-full flex flex-row-reverse items-center mt-20 mb-14'>
-        <section className='absolute inset-0 flex items-center justify-center opacity-20 blur-2xl'>
+
+      <div className='mobile:relative h-full w-full flex flex-row-reverse items-center mt-20 mb-14'>
+        <section className='mobile:hidden tablet:hidden absolute inset-0 flex items-center justify-center opacity-20 blur-2xl'>
           <div className='bg-gradient-to-bl from-[#19193d] to-[#0f0f31] w-96 h-96 rounded-full animate-flow'></div>
         </section>
 
         <div
           className={`${
-            isVisible
-              ? 'relative z-30 side-left w-1/2 items-center justify-center h-[85vh] overflow-y-scroll border-gray-400 border-2 rounded-lg scroller ml-20 bg-backg bg-opacity-10 backdrop-blur-md bg-gray-400 slide-anim-right'
+            true
+              ? 'mobile:w-full tablet:w-full tablet:h-fit tablet:mb-12 tablet:ml-0 mobile:ml-0 relative z-30 side-left w-1/2 items-center justify-center h-[85vh] overflow-y-scroll border-slate-700 border-2 rounded-lg scroller ml-20 bg-backg bg-opacity-10 backdrop-blur-md bg-gray-400 slide-anim-right'
               : 'invis'
           }`}
         >
@@ -38,7 +36,6 @@ export default function Ideology() {
             technologies would augment or increase human sensory reception,
             emotive ability, or cognitive capacity as well as radically improve
             human health and extend human life spans. <br />
-            <span ref={containerRef}></span>
             <br /> The Transhuman Coin is a cryptocurrency dedicated to funding
             researches and development of technologies that enhance Human Life
             Experience. We will donate to causes that promote human life. In 1
@@ -80,14 +77,14 @@ export default function Ideology() {
 
         <div
           className={`${
-            isVisible
-              ? 'side-right flex items-center justify-center w-1/2 slide-anim z-10 h-[85vh]'
+            true
+              ? 'mobile:hidden tablet:hidden side-right flex items-center justify-center w-1/2 slide-anim z-10 h-[85vh]'
               : 'invis'
           }`}
         >
           <Image src='/logo.png' alt={''} width={400} height={400} />
         </div>
-        <span ref={containerRef}></span>
+        <span ref={ref}></span>
       </div>
     </div>
   );

@@ -1,19 +1,20 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRef } from 'react';
 import useElementOnScreen from '../utils/useElementOnScreen';
 
 const Community = () => {
-  const [containerRef, isVisible] = useElementOnScreen();
+  const ref = useRef();
+  const isVisible = useElementOnScreen(ref);
   return (
     <>
-      <div></div>
-      <section className='relative grid grid-cols-2 mt-52 py-32 px-20 bg-white'>
+      <span ref={ref}></span>
+      <section className='mobile:px-8 mobile:mt-24 mobile:grid-cols-1 tablet:grid-cols-1  relative grid grid-cols-2 mt-52 py-32 px-20 bg-white'>
         <div className={`${isVisible ? 'slide-anim' : 'invis'}`}>
-          <p className='mb-12 text-4xl text-black font-bold'>
+          <p className='mobile:text-center tablet:text-center mb-12 text-4xl text-black font-bold'>
             Join our Community
           </p>
-          <p ref={containerRef}></p>
-          <p className='text-sm pr-32 mt-2 text-black  font-light'>
+          <p className='mobile:pr-0 mobile:text-center tablet:text-center tablet:pr-0 text-sm pr-32 mt-2 text-black font-light'>
             Transhumanism is the ideology of enhancing human life through
             Science and Technology. The Transhuman Coin is the first and only
             token dedicated to Transhumanism. As a project driven by a devoted
@@ -26,7 +27,9 @@ const Community = () => {
 
         <div
           className={`${
-            isVisible ? 'flex flex-wrap gap-3 w-full slide-anim-right' : 'invis'
+            isVisible
+              ? 'mobile:justify-center mobile:mt-10 mobile:gap-0 tablet:mt-20 tablet:justify-center flex flex-wrap gap-3 w-full slide-anim-right'
+              : 'invis'
           }`}
         >
           <Link href='https://discord.gg/mj72jmyMTw'>
@@ -48,7 +51,7 @@ const Community = () => {
               </p>
             </div>
           </Link>
-          <span ref={containerRef}></span>
+          <span ref={ref}></span>
           <Link href='https://www.facebook.com/transhumancoin'>
             <div className='flex justify-evenly py-8 items-center rounded-lg border-spacing-4 border-2 bg-gradient-to-b from-slate-900 to-black transition-all hover:shadow-md hover:shadow-gray-800 max-w-xs w-60 mb-2'>
               <Image width={40} height={40} src='/twitter.svg' alt='' />

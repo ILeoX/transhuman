@@ -9,16 +9,16 @@ module.exports = {
       colors: {},
     },
     screens: {
-      mobile: '170px',
+      mobile: { max: '540px' },
       // => @media (min-width: 170px) { ... }
 
-      tablet: '640px',
+      tablet: { max: '1050px' },
       // => @media (min-width: 640px) { ... }
 
-      laptop: '1024px',
+      laptop: { max: '1024px' },
       // => @media (min-width: 1024px) { ... }
 
-      desktop: '1280px',
+      desktop: { max: '1280px' },
       // => @media (min-width: 1280px) { ... }
     },
   },

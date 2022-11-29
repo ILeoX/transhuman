@@ -38,6 +38,12 @@ a {
   background-color: #eeeeee;
 }
 
+.hero {
+  background-image: url('../public/Herobg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .animate-flow {
   animation: flow-right 50s ease-in-out infinite;
 }
@@ -50,6 +56,9 @@ a {
   clip-path: polygon(0 40px, 40px 0, 100% 0, 100% 100%, 0 100%);
 }
 
+.clip-10 {
+  clip-path: polygon(0 20px, 20px 0, 100% 0, 100% 100%, 0 100%);
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -189,8 +198,7 @@ div.loader > span {
 }
 
 .border-anim {
-  animation: border-anim 2s ease-in forwards;
-  transition: border 500ms ease-in-out;
+  animation: border-anim 500ms ease-in forwards;
 }
 
 @keyframes ring {
@@ -322,7 +330,7 @@ div.loader > span {
   }
 
   100% {
-    border: 1px solid #0456c8;
+    @apply border-2 border-green-300;
   }
 }
 

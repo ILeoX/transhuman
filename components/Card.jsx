@@ -1,8 +1,10 @@
 import Image from 'next/image';
+import { useRef } from 'react';
 import useElementOnScreen from '../utils/useElementOnScreen';
 
 const Card = ({ image, heading, text, status }) => {
-  const [containerRef, isVisible] = useElementOnScreen();
+  const ref = useRef();
+  const isVisible = useElementOnScreen(ref);
   const steps = text.split(',').map((step) => {
     return (
       <li key={step} className='list-none mt-2'>
@@ -19,7 +21,7 @@ const Card = ({ image, heading, text, status }) => {
       <div
         className={`${
           isVisible
-            ? ' border-[#19213b] border-2 rounded-2xl w-fit pb-10 transition-all bg-gradient-to-b from-[#050812] via-[#19213b] to-[#0c1329] hover:scale-105 hover:border-[#1e2a50] slide-anim shadow-lg'
+            ? ' mobile:w-72 tablet:w-[60vmin] mobile:text-center tablet:text-center border-[#19213b] border-2 rounded-2xl w-fit pb-10 transition-all bg-gradient-to-b from-[#050812] via-[#19213b] to-[#0c1329] hover:scale-105 hover:border-[#1e2a50] slide-anim shadow-lg'
             : 'invis'
         }`}
       >
@@ -32,7 +34,7 @@ const Card = ({ image, heading, text, status }) => {
             height={100}
           />
 
-          <span ref={containerRef}></span>
+          <span ref={ref}></span>
           <p
             className={
               status.toLowerCase() == 'coming soon'
@@ -45,7 +47,9 @@ const Card = ({ image, heading, text, status }) => {
         </div>
 
         <div className='h-3/6 relative flex-col px-8 pt-7 pb-2 -mt-7 rounded-b-2xl'>
-          <p className='text-4xl text-white font-bold'>{heading}</p>
+          <p className='mobile:text-2xl text-4xl text-white font-bold'>
+            {heading}
+          </p>
           <div className='text-sm mt-3 text-white'>{steps}</div>
         </div>
       </div>

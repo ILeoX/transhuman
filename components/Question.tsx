@@ -18,7 +18,7 @@ export default function Question({ question, answer }) {
       <div
         className={`${
           true
-            ? 'relative clip border-2 border-gray-500 text-center p-5 mx-56 mb-8 cursor-pointer'
+            ? 'mobile:mx-12 mobile:p-3 mobile:clip-10 tablet:mx-20 relative clip border-2 border-gray-500 text-center p-5 mx-56 mb-8 cursor-pointer'
             : 'invis'
         }`}
         onClick={handleClick}
@@ -29,11 +29,11 @@ export default function Question({ question, answer }) {
           </div>
         </div>
         <div onMouseDown={handleClick} className='cursor-pointer'>
-          <p className='font-bold text-base'> {question} </p>
+          <p className='mobile:text-sm font-bold text-base'> {question} </p>
         </div>
-        <div>
+        <div className='mobile:text-xs '>
           <p
-            className='text-sm answer text-gray-300 transition-all'
+            className='answer text-gray-300 transition-all'
             id={`${open ? 'open' : 'hidden'}`}
           >
             {answer}

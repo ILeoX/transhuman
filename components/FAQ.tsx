@@ -48,8 +48,8 @@ export default function Faq() {
       <section className='absolute inset-0 flex items-center justify-center opacity-20 blur-2xl'>
         <div className='bg-gradient-to-bl from-[#19193d] to-[#0f0f31] w-32 h-32 rounded-full'></div>
       </section>
-      <div className='text-4xl text-center font-bold text-white py-3 pb-24'>
-        <p className={`${true ? '' : 'invis'}`}>
+      <div className='mobile:text-3xl mobile:mx-8 mobile:pb-12 text-4xl text-center font-bold text-white py-3 pb-24'>
+        <p className={`${true ? 'mobile:text-green-500' : 'invis'}`}>
           {/* <span ref={containerRef}></span> */}
           <span className='text-green-500'> Frequently </span>
           Asked Questions

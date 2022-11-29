@@ -1,21 +1,27 @@
 import useElementOnScreen from '../utils/useElementOnScreen';
 import Card from './Card';
-import { LegacyRef } from 'react';
+import { LegacyRef, useRef } from 'react';
 
 export default function Roadmap() {
-  const [containerRef, isVisible] = useElementOnScreen() as [
-    LegacyRef<HTMLSpanElement>,
-    boolean
-  ];
+  const ref = useRef();
+  let inView: boolean = false;
+
+  const isVisible = useElementOnScreen(ref);
+
   return (
     <div>
-      <div className='relative flex-col pt-32 mx-20 w-fit' id='roadmap'>
-        <section className='absolute inset-0 flex items-center justify-center opacity-20 blur-2xl'>
-          <div className='bg-gradient-to-bl from-[#19193d] to-[#0f0f31] w-full h-full rounded-full'></div>
+      <div
+        className='mobile:pt-24 mobile:px-8 tablet:px-8 relative flex-col pt-32 px-52 w-fit'
+        id='roadmap'
+      >
+        <span ref={ref}></span>
+        <section className='mobile:hidden tablet:hidden absolute inset-0 flex items-center justify-center opacity-20 blur-2xl'>
+          <div className='bg-gradient-to-bl from-[#19193d] to-[#0f0f31] w-[50%] h-[50%] rounded-full'></div>
         </section>
-        <div className='text-4xl text-center font-bold text-white py-3'>
-          <p className={`${isVisible ? 'fall-anim' : 'invis'}`}>
-            <span ref={containerRef}></span>
+        <div className='mobile:text-3xl text-4xl text-center font-bold text-white py-3'>
+          <p
+            className={`${isVisible ? ' opacity-100 fall-anim' : ' opacity-0'}`}
+          >
             <span className='text-green-500'> Our </span>
             Roadmap
           </p>
