@@ -11,7 +11,7 @@ export default function Roadmap() {
   return (
     <div>
       <div
-        className='mobile:pt-24 mobile:px-8 tablet:px-8 relative flex-col pt-32 px-52 w-fit'
+        className='mobile:pt-24 mobile:px-4 tablet:px-8 relative flex-col pt-32 px-52 w-fit'
         id='roadmap'
       >
         <span ref={ref}></span>

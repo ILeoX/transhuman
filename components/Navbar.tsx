@@ -44,10 +44,10 @@ export default function Nav() {
   }, [mobileMenu]);
 
   return (
-    <div className='mobile:px-8 tablet:px-8 mobile:py-2 px-20 py-7 bg-gray-700 bg-backg bg-opacity-5 backdrop-blur-md top-0 z-[60] flex justify-between sticky items-center w-full h-auto'>
+    <div className='mobile:px-8 tablet:px-8 mobile:py-5 px-20 py-7 bg-gray-700 bg-backg bg-opacity-5 backdrop-blur-md top-0 z-[60] flex justify-between sticky items-center w-full h-auto'>
       <div className='flex items-center font-semibold'>
         <Image
-          className='mobile:w-5 mobile:h-5'
+          className='mobile:w-10 mobile:h-10'
           src='/logo.png'
           height={40}
           width={40}

@@ -39,7 +39,7 @@ a {
 }
 
 .hero {
-  background-image: url('../public/Herobg.jpg');
+  background-image: url('../public/Herobg.jpg') !important;
   background-size: cover;
   background-repeat: no-repeat;
 }

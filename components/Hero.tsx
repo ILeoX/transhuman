@@ -1,12 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Hero2 from '../public/Herobg.jpg';
 
 export default function Hero() {
   return (
     <div className='mobile:-mt-5 mobile:h-[90vh] hero relative h-screen flex items-center -mt-10'>
       {/**Image Holder */}
-
       {/**Moving Anim */}
       <div className='mobile:hidden tablet:hidden absolute inset-0 flex items-center justify-center opacity-20 blur-2xl z-50'>
         <div className='bg-gradient-to-bl from-[#36CFB5] to-[#113434] scale-125 w-96 h-80 rounded-full animate-flow'></div>
@@ -34,14 +32,14 @@ export default function Hero() {
 
           <div className='mobile:mt-8 tablet:justify-center flex gap-3 mt-14 text-sm slide-anim'>
             <Link
-              className='mobile:text-xs border-[1px] border-white p-3'
+              className='mobile:text-sm border-[1px] border-white p-3'
               href=''
             >
               Understand our objective
             </Link>
 
             <Link
-              className='mobile:text-xs p-3 font-bold hover:border-[1px] hover:border-green-500 hover:bg-transparent bg-green-500  '
+              className='mobile:text-sm p-3 font-bold hover:border-[1px] hover:border-green-500 hover:bg-transparent bg-green-500  '
               href=''
             >
               Visit Store

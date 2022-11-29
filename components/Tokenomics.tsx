@@ -10,7 +10,7 @@ const Tokenomics = (props: Props) => {
 
   return (
     <div
-      className='relative pt-32 flex-col justify-center clip '
+      className='mobile:pt-20 relative pt-32 flex-col justify-center clip '
       id='tokenomics'
     >
       <div
@@ -22,6 +22,7 @@ const Tokenomics = (props: Props) => {
       >
         <p className={`${true ? 'mobile:text-3xl' : 'invis'}`}>
           <span className='text-green-500'> Tokenomics </span>
+          <span ref={ref}></span>
         </p>
       </div>
 
@@ -29,7 +30,7 @@ const Tokenomics = (props: Props) => {
         <div
           className={`${
             isVisible
-              ? 'mobile:mx-8 tablet:mx-20 relative clip text-center p-5 mx-56 mb-8 z-50 border-anim'
+              ? 'mobile:mx-4 tablet:mx-20 relative clip text-center p-5 mx-56 mb-8 z-50 border-anim'
               : 'invis'
           }`}
         >

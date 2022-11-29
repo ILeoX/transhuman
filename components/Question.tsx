@@ -18,7 +18,7 @@ export default function Question({ question, answer }) {
       <div
         className={`${
           true
-            ? 'mobile:mx-12 mobile:p-3 mobile:clip-10 tablet:mx-20 relative clip border-2 border-gray-500 text-center p-5 mx-56 mb-8 cursor-pointer'
+            ? 'mobile:mx-6 mobile:p-3 mobile:clip-10 tablet:mx-20 relative clip border-2 border-gray-500 text-center p-5 mx-56 mb-8 cursor-pointer'
             : 'invis'
         }`}
         onClick={handleClick}
